@@ -6,7 +6,32 @@
         xmlns:local="clr-namespace:numar_prim"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="106*"/>
+            <ColumnDefinition Width="281*"/>
+            <ColumnDefinition Width="386*"/>
+
+        </Grid.ColumnDefinitions>
+        <Label Grid.ColumnSpan="2" Margin="0,0,0.2,0.4">Names</Label>
+        <ListBox x:Name="lstNames" Grid.ColumnSpan="2" Margin="0,30,0.2,0" Grid.RowSpan="2"/>
+        <StackPanel Grid.Column="2" Margin="4.8,30,-0.4,0" Grid.RowSpan="2">
+            <TextBox x:Name="txtName"/>
+            <Button x:Name="btnAdd" Margin="0,5,-0.4,0" Click="ButtonAddName_Click" Content="AddName"/>
+        </StackPanel>
+        <TextBlock Name="TextBlock1" Height="30" Width="200"
+                   Text="Hello!I am a TextBlock." Foreground="Red" Grid.ColumnSpan="2" Margin="94,0,93.2,0.4"></TextBlock>
+        <Button Click="HelloWorldButton_Click" Grid.ColumnSpan="2" Margin="0,0,0.2,0.4">Apasa!</Button>
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="76" VerticalAlignment="Top" Width="70" Grid.Column="2" Margin="38.8,82.6,0,0" Grid.Row="1"/>
+
+
+
+
+
     </Grid>
 </Window>
+    
